@@ -32,22 +32,7 @@ import com.hp.hpl.jena.util.ResourceUtils;
  */
 public class MIMUtil 
 {
-	//TODO Fix to actually give the string rather than write out to file
-    public static String getTurtle(String file) throws Exception
-    {
-
-    	Model model = ModelFactory.createDefaultModel();
-    	
-    	model.read("http://www.chemspider.com/Chemical-Structure.7787.rdf");
-    	
-        
-    	model.write(System.out,"TURTLE");
-        
-        skollemize("http://www.chemspider.com/Chemical-Structure.7787.rdf", "resources/Chemical-Structure.7787.skollemized.rdf");
-   
-        return "";
-    }
-
+	
 
     public static Model skollemize(String url, String out) throws Exception {
 
